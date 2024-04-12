@@ -26,7 +26,8 @@ getSurahs();
 async function getSurahs() {
     try {
         const [metaResponse, suwarResponse, quranResponse] = await Promise.all([
-            fetch("http://api.alquran.cloud/v1/meta"),
+           fetch("http://api.alquran.cloud/v1/meta"),
+,
             fetch("https://www.mp3quran.net/api/v3/suwar?language=ar"),
             fetch("https://api.alquran.cloud/v1/quran/en.asad")
         ]);
