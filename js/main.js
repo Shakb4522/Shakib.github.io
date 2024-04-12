@@ -26,12 +26,15 @@ getSurahs();
 async function getSurahs() {
     try {
         const [metaResponse, suwarResponse, quranResponse] = await Promise.all([
-           fetch("https://api.alquran.cloud/v1/meta"),
-
-,
+            fetch("https://api.alquran.cloud/v1/meta"),
             fetch("https://www.mp3quran.net/api/v3/suwar?language=ar"),
             fetch("https://api.alquran.cloud/v1/quran/en.asad")
         ]);
+        
+        if (!metaResponse.ok || !suwarResponse.ok || !quranResponse.ok) {
+            throw new Error('Failed to fetch data');
+        }
+        
         const [metaData, suwarData, quranData] = await Promise.all([
             metaResponse.json(),
             suwarResponse.json(),
@@ -167,7 +170,7 @@ async function getSurahs() {
                 });
             });
         });
-    } catch (error) {
+     } catch (error) {
         console.error('Error fetching data:', error);
     }
 }
