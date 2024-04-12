@@ -1,0 +1,694 @@
+html {
+    width: 100%;
+  
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    position: relative;
+    background-color: white;
+    box-sizing: border-box;
+    width: 100%;
+    
+
+   
+}
+.pauseSurah {
+    display: none;
+}
+#header {
+    background-color: #004a39 ;
+    display: flex;
+    z-index: 9999999;
+    position: relative;
+    padding: 0 80px 0 400px;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+
+}
+#header ul {
+    display: flex;
+    
+    height: 100%;
+    align-items: center;
+    gap: 20px;
+   
+    width: 65%;
+    justify-content: center;
+
+
+}
+#header ul li {
+   
+    height: 50%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    width: 300px;
+}
+#header ul li a {
+    color: white;
+    letter-spacing: 1px;
+    
+    font-size: 20px;
+}
+.picture {
+    position: absolute;
+    left: 80px;
+    top: -10px;
+}
+.picture img {
+    width: 200px;
+
+}
+
+
+.timing {
+    background-color: #dc9c33;
+    width: 240px;
+    cursor: pointer;
+    height: 40%;
+    border-radius: 30px;
+    display: flex;
+    transition: 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 7px 7px 0px #dc9b3350;
+    
+}
+.timing:hover {
+    transform: scale(1.1);
+}
+.timing h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.upHome {
+    background-color: #004a39;
+    height: 95vh;
+    width: 100%;
+    display: flex;
+
+    z-index: 100000;
+
+    position: relative;
+}
+.upHome > img  {
+    position: absolute;
+    width: 100%;
+    opacity: 0.3;
+    bottom: 0;
+}
+
+.downHome {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -5px;
+    position: relative;
+    z-index: 5;
+    background-image: url("/images/19429752150.png");
+    height: 270px;
+    
+    background-position: center;
+    background-size: cover;
+}
+.leftHome {
+   
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding-left: 80px;
+
+}
+.leftHome > h3 {
+    font-size: 45px;
+    color: white;
+    z-index: 300000;
+    text-transform: uppercase;
+    font-family: "Bree Serif", serif;
+    text-align: center;
+    z-index: 999999999999999;
+    letter-spacing: 8px;
+}
+.leftHome > h4 {
+    color: white;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    text-align: center;
+    direction: rtl;
+    font-size: 20px;
+    z-index: 99999999999999999;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+.rightHome {
+   
+    height: 100%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rightHome > img {
+    width: 78%;
+    z-index: 3000;
+}
+
+
+#header2 {
+    background-color: white;
+    width: 100%;
+   
+  
+    height: 90px;
+    display: none;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    
+    
+
+}
+#header2 .image {
+   position: absolute;
+   left: 30px;
+   height: 100%;
+   width: 120px;
+   z-index: 999900000;
+  
+   margin-top: -10px;
+
+}
+#header2 .image img {
+   width: 120%;
+   
+}
+#header2 > i {
+    font-size: 28px;
+    margin-right: 30px;
+    border: 2px solid #dc9c33;
+    width: 65px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dc9c33;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.sous {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Off-screen initially */
+   bottom: 0;
+   display: none;
+    background-color: #004a39;
+    width: 100%; /* Adjust as needed */
+    transition:  0.5s ease; /* Adjust the transition as needed */
+    z-index: 9999999999999999999999; /* Ensure it appears above other content */
+}
+
+/* Other CSS rules remain the same */
+
+.sous > ul {
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.sous > ul > li {
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: center;
+}
+.sous > ul > li > a {
+    color: white;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sous > i {
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+
+.active {
+    color: #dc9c33 !important;
+    font-weight: 400 !important;
+}
+
+
+
+
+#quran .kitaba {
+    margin-top: 15px;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.kitaba > img {
+    height: 100%;
+}
+.search {
+    width: 100%;
+    height: 80px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+.search .searchE {
+    height: 55%;
+    border: 2px solid #004a39 ;
+    width: 550px;
+    padding: 0 30px;
+    font-size: 17px;
+    font-weight: 400;
+    color: black;
+    outline: none;
+  
+    border-radius: 20px;
+
+}
+.search .searchA {
+    height: 55%;
+    border: 2px solid #004a39 ;
+    width: 550px;
+    padding: 0 30px;
+    font-size: 17px;
+    font-weight: 400;
+    color: black;
+    outline: none;
+    direction: rtl;
+    display: none;
+    border-radius: 20px;
+
+}
+.surahs {
+   margin-top: 40px;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+
+}
+.button {
+    background-color: #004a39;
+    border: none;
+    height: 55%;
+    color: white;
+    border-radius: 20px;
+    padding: 0 10px;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+.one {
+    transition: 0.2s ease;
+    position: relative;
+    width: 32%;
+    cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, 0.363);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 20px;
+    height: 70px;
+}
+.one .number {
+    background-color:rgba(128, 128, 128, 0.363);
+    height: 40px;
+    width: 40px;
+    transition: 0.2s ease;
+    display: flex;
+    margin-right: 18px;
+    align-content: center;
+    justify-content: center;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    position: relative;
+
+}
+.number > h5 {
+    transition: 0.2s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)  rotate(-45deg);
+} 
+.one:hover {
+    border: 1px solid #004a39;
+}
+.one:hover .number {
+    background-color: #004a39;
+}
+.one:hover .number h5 {
+    color: white;
+}
+.one .numbers {
+    position: absolute;
+    right: 20px;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+.popup {
+    height:580px ;
+    z-index: 999999999999999;
+    top: 140px;
+    flex-direction: column;
+    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    overflow: auto;
+    width: 80%;
+    display: none;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.181);
+    border-radius: 20px;
+}
+.popup .fo9 {
+
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.fo9 h4 {
+   font-size: 30px;
+   font-family: "Noto Kufi Arabic", sans-serif;
+   font-weight: 400;
+}
+.fo9 h5 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-weight: 400;
+}
+
+.fo9 > audio {
+    
+    width: 290px;
+    height: 50px;
+}
+.middle {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-bottom: 12px;
+    color: #004a39;
+    font-size: 18px;
+}
+.taht {
+    
+    
+    margin: auto;
+   
+    
+}
+.wahda {
+    padding: 20px 0px 20px 40px;
+    border-bottom: 1px solid black;
+    position: relative;
+    width: 92%;
+    margin: auto;
+}
+.wahda .fa-play {
+  
+   
+    cursor: pointer;
+    font-size: 21px;
+    color: rgba(128, 128, 128, 0.649);
+    top: 30%;
+    
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+.buttons {
+   
+    height: 80%;
+    justify-content: center;
+    width: 40px;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+}
+.wahda .fa-stop {
+    
+    color: rgba(128, 128, 128, 0.649);
+    left: -20px;
+    width: 35px;
+    bottom: 30%;
+   
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 21px;
+    transition: 0.3s ease;
+    top: 80px;
+}
+.fa-stop:hover {
+    background-color: #004a39ac;
+    color: white;
+    font-size: 18px;
+}
+.fa-play:hover {
+    background-color: #004a39ac;
+    color: white;
+    font-size: 18px;
+}
+
+ .wahda .arabe {
+    
+    direction: rtl;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+ .wahda .english {
+    
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+ .wahda .audio {
+   width: 100%;
+   
+   position: relative;
+   height: 60px;
+
+}
+.audio > audio {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.cancel {
+    position: fixed;
+    top: 15px;
+    cursor: pointer;
+    left: 20px;
+    font-size: 26px;
+
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);
+    }
+}
+ 
+
+ @-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.load {
+	width: 150px;
+    z-index: 9999999999999999999999999999999;
+	height: 150px;
+    position: fixed;
+    display: none;
+	left: 45%;
+    transform: translate(-50% , -50%);
+    top: 50%;
+	border:solid 10px #004a39;
+	border-radius: 50%;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	 -webkit-transition: all 0.5s ease-in;
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         1.0s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+    	
+    	 transition: all 0.5s ease-in;
+    animation-name:             rotate; 
+    animation-duration:         1.0s; 
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear; 
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    #header {
+        display: none;
+    }
+    #header2 {
+        display: flex;
+    }
+    .sous {
+        display: flex;
+    }
+    .upHome{
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    .upHome .rightHome {
+        width: 100%;
+        margin-top: 70px;
+    }
+    .rightHome img {
+        width: 90%;
+    }
+    .leftHome {
+        width:100% ;
+        padding: 0 10px;
+    }
+    .leftHome h3 {
+        font-size: 36px;
+    }
+    .leftHome h4 {
+        margin-bottom: 50px;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    .downHome {
+        display: none;
+    }
+    .upHome {
+        overflow: hidden;
+    }
+    .upHome > img {
+        width: 230%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .kitaba {
+       
+        margin-top: 40px !important;
+    }
+    .kitaba img {
+        height: 90%;
+    }
+    .search .searchE {
+        width: 90%;
+        height: 100%;
+    }
+    .search .searchA {
+        width: 90%;
+        height: 100%;
+    }
+    .button {
+        height: 80px !important;
+    }
+    .search {
+        margin-top: 10px;
+        height: 100px;
+        flex-direction: column;
+    }
+    .surahs {
+        flex-direction: column;
+       
+        padding: 0 20px;
+        width: 100%;
+    }
+    .surahs .one {
+        width: 93%;
+    }
+    .popup {
+        width: 90%;
+        height: 650px;
+    }
+    .middle {
+        padding-right: 20px;
+        margin-top: 10px;
+    }
+    .load {
+        left: 30%;
+    }
+
+  
+}
